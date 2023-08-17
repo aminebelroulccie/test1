@@ -4,8 +4,6 @@ metadata:
   name: nginx-deployment004
   labels:
     app: nginx
-  annotations:
-    argocd.argoproj.io/hook: test1
 spec:
   replicas: 1
   selector:
