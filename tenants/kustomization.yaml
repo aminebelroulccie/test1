@@ -1,4 +1,4 @@
-namePrefix: kustomize-
+namePrefix: app1-
 
 resources:
 - apps/app.yaml
