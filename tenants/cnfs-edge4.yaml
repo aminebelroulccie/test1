@@ -38,7 +38,7 @@ spec:
   cnf: cnf-wan-mpls-1-edge4
   config:
     controllerId:
-      id: mediator@namla.cloud
+      id: mediator@namla.com
       type: RFC822_ADDR
     controllerIpAddress: 13.38.23.122
     localId:
