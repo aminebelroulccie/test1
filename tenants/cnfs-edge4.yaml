@@ -4,6 +4,8 @@ kind: CloudNativeNetworkFunction
 metadata:
   name: cnf-wan-mpls-1-edge4
   namespace: namla-system
+  labels:
+    controlled-by: amine
 spec:
   address: 10.25.13.135/24
   ifname: ens5
@@ -18,6 +20,8 @@ kind: CloudNativeNetworkFunction
 metadata:
   name: cnf-lan-lan-2-edge4
   namespace: namla-system
+  labels:
+    controlled-by: amine
 spec:
   address: 10.25.22.178/24
   ifname: ens4
@@ -33,6 +37,8 @@ kind: CloudNativeNetworkControllerVpnProfile
 metadata:
   name: cnf-vpn-profile-cnf-wan-mpls-1-edge4
   namespace: namla-system
+  labels:
+    controlled-by: amine
 spec:
   nodename: edge4
   cnf: cnf-wan-mpls-1-edge4
@@ -54,6 +60,8 @@ kind: CloudNativeNetworkLinuxRoute
 metadata:
   name: cnf-default-route-cnf-wan-mpls-1-edge4
   namespace: namla-system
+  labels:
+    controlled-by: amine
 spec:
   nodename: edge4
   cnf: cnf-wan-mpls-1-edge4
