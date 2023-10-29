@@ -2,12 +2,12 @@
 apiVersion: cnf.namla.com/v1alpha1
 kind: CloudNativeNetworkFunction
 metadata:
-  name: cnf-wan-mpls-1-edge-amine2
+  name: cnf-wan-mpls-1-edge-amine4
   namespace: namla-system
 spec:
-  address: 172.20.1.2/32
+  address: 172.20.3.5/32
   ifname: ens5
-  nodename: edge-amine2
+  nodename: edge-amine4
   nvni-name: nvni-1
   type: WAN
   control-plane:
@@ -16,12 +16,12 @@ spec:
 apiVersion: cnf.namla.com/v1alpha1
 kind: CloudNativeNetworkFunction
 metadata:
-  name: cnf-lan-lan-2-edge-amine2
+  name: cnf-lan-lan-2-edge-amine4
   namespace: namla-system
 spec:
-  address: 172.22.15.197/32
+  address: 172.22.15.198/32
   ifname: ens6
-  nodename: edge-amine2
+  nodename: edge-amine4
   nvni-name: nvni-2
   type: LAN
   #stn: true
@@ -31,18 +31,18 @@ spec:
 apiVersion: cnf.namla.com/v1alpha1
 kind: CloudNativeNetworkControllerVpnProfile
 metadata:
-  name: cnf-vpn-profile-cnf-wan-mpls-1-edge-amine2
+  name: cnf-vpn-profile-cnf-wan-mpls-1-edge-amine4
   namespace: namla-system
 spec:
-  nodename: edge-amine2
-  cnf: cnf-wan-mpls-1-edge-amine2
+  nodename: edge-amine4
+  cnf: cnf-wan-mpls-1-edge-amine4
   config:
     controllerId:
       id: controllercnf@namla.cloud
       type: RFC822_ADDR
-    controllerIpAddress: 34.38.149.171
+    controllerIpAddress: 35.195.61.138
     localId:
-      id: cnf-wan-mpls-1-edge-amine2@namla.cloud
+      id: cnf-wan-mpls-1-edge-amine4@namla.cloud
       type: RFC822_ADDR
     authentication:
       type: psk
@@ -52,13 +52,13 @@ spec:
 apiVersion: cnf.namla.com/v1alpha1
 kind: CloudNativeNetworkLinuxRoute
 metadata:
-  name: cnf-default-route-cnf-wan-mpls-1-edge-amine2
+  name: cnf-default-route-cnf-wan-mpls-1-edge-amine4
   namespace: namla-system
 spec:
-  nodename: edge-amine2
-  cnf: cnf-wan-mpls-1-edge-amine2
+  nodename: edge-amine4
+  cnf: cnf-wan-mpls-1-edge-amine4
   config:
     scope: GLOBAL
     dst_network: 0.0.0.0/0
-    gw_addr: 172.20.1.1
+    gw_addr: 172.20.3.1
     metric: 0
