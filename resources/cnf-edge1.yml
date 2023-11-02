@@ -5,7 +5,7 @@ metadata:
   name: cnf-wan-mpls-1-edge-amine1
   namespace: namla-system
 spec:
-  address: 172.20.0.198/24
+  address: 172.20.0.201/24
   ifname: ens5
   nodename: edge-amine1
   nvni-name: nvni-1
@@ -19,7 +19,7 @@ metadata:
   name: cnf-lan-lan-2-edge-amine1
   namespace: namla-system
 spec:
-  address: 172.22.15.200/24
+  address: 172.22.15.213/24
   ifname: ens6
   nodename: edge-amine1
   nvni-name: nvni-2
