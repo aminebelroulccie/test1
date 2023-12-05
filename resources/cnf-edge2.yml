@@ -40,7 +40,7 @@ spec:
     controllerId:
       id: controllercnf@namla.cloud
       type: RFC822_ADDR
-    controllerIpAddress: 34.76.246.98
+    controllerIpAddress: 34.78.148.235
     localId:
       id: cnf-wan-mpls-1-edge-amine2@namla.cloud
       type: RFC822_ADDR
