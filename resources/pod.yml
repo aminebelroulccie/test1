@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: nginx-edge1
 spec:
-  nodeName: edge-amine1
+  nodeName: edge1
   containers:
   - name: nginx
     image: nginx:1.14.2
@@ -15,7 +15,7 @@ kind: Pod
 metadata:
   name: nginx-edge2
 spec:
-  nodeName: edge-amine2
+  nodeName: edge2
   containers:
   - name: nginx
     image: nginx:1.14.2
